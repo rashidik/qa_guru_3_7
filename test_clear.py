@@ -21,7 +21,7 @@ def open_browser(set_browser_size_window):
 @allure.story('Чистый тест без степов')
 @allure.link('https://github.com', name='Testing')
 def test_clear(open_browser):
-   browser.element('[name="q"]').type('rashidik/qa_guru_3_7').press_enter()
-   browser.element(by.link_text('rashidik/qa_guru_3_7')).click()
-   browser.element('#issues-tab').click()
-   browser.element(by.partial_text('#1 opened')).should(be.visible)
+    browser.element('[name="q"]').type('rashidik/qa_guru_3_7').press_enter()
+    browser.element(by.link_text('rashidik/qa_guru_3_7')).click()
+    browser.element('#issues-tab').click()
+    browser.element(by.partial_text('#1 opened')).should(be.visible)
