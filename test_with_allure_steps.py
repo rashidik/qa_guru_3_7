@@ -24,14 +24,14 @@ def open_browser(set_browser_size_window):
 @allure.story('Чистый тест без степов')
 @allure.link('https://github.com', name='Testing')
 def test_allure_steps(open_browser):
-   with allure.step('ищем репозиторий'):
+    with allure.step('ищем репозиторий'):
       browser.element('[name="q"]').type('rashidik/qa_guru_3_7').press_enter()
 
-   with allure.step('Переходим по найденной ссылке'):
+    with allure.step('Переходим по найденной ссылке'):
       browser.element(by.link_text('rashidik/qa_guru_3_7')).click()
 
-   with allure.step('Открываем таб issues'):
+    with allure.step('Открываем таб issues'):
       browser.element('#issues-tab').click()
 
-   with allure.step('Проверяем наличие issue с номером 1'):
+    with allure.step('Проверяем наличие issue с номером 1'):
       browser.element(by.partial_text('#1 opened')).should(be.visible)
