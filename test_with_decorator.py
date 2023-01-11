@@ -5,7 +5,6 @@ from selene import be
 from allure_commons.types import Severity
 
 
-
 @allure.tag('qa_guru')
 @allure.severity(Severity.CRITICAL)
 @allure.label('owner', 'Rashid')

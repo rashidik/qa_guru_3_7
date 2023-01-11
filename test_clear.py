@@ -5,14 +5,17 @@ import pytest
 from selene import be
 from allure_commons.types import Severity
 
+
 @pytest.fixture()
 def set_browser_size_window():
     browser.config.window_height = 720
     browser.config.window_width = 1280
 
+
 @pytest.fixture()
 def open_browser(set_browser_size_window):
     browser.open('https://github.com/')
+
 
 @allure.tag('qa_guru')
 @allure.severity(Severity.CRITICAL)
